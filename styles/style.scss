@@ -1,0 +1,150 @@
+// Bootstrap and its default variables
+
+$spacer: 1rem;
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 5),
+    7: ($spacer * 10)
+    
+  ),
+  $spacers
+);
+
+@import "scss/bootstrap";
+
+
+
+#main-nav{
+  min-height:70px;
+  font-size: 1rem;
+  a{
+    font-family: 'Roboto Slab', serif;
+  }
+}
+
+.overlay{
+  background-color: #6C5B44;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity:0.8;
+  position: absolute;
+  z-index: 1;
+}
+
+
+#header{
+  background-image: url(img/header.jpg);
+  background-size: cover;
+  background: contain;
+  position: relative;
+
+  
+  #inner{
+    position:relative;
+    z-index:2;
+    h1,h2,h3,h4,h5{
+      color:white;
+      text-shadow: 3px 3px 6px rgb(0, 0, 0);
+    }
+  }
+}
+
+#features{
+  background-color: #00679F;
+  p,h1,h2,h3,h4,h5{
+    color: white;
+  }
+  img{
+    margin: auto;    
+    display: block;
+  }
+}
+
+#back{
+  background-image: url(img/desk.jpg);
+  height:700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+}
+
+#projects{
+  .card-img-top{
+    height: 14rem;
+  }
+}
+
+#team{
+  img{
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+#contact{
+  background-color: #729BB1;
+  h1,h2,h3,h4,h5,label{
+    color: white;
+  }
+}
+
+.gmap_canvas{
+  overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    iframe{
+      left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+}
+html {
+  font-size: 0.8rem;
+  scroll-behavior: smooth;
+}
+
+p,h1,h2,h3,h4,h5,label{
+  font-family: 'Roboto Slab', serif;
+}
+
+
+
+
+
+
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 0.8rem;
+  }
+ 
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1rem;
+  }
+  
+}
+
